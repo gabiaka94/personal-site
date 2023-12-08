@@ -1,1 +1,45 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  color: #fff;
+  background-color: #1a1a1a;
+  margin: 0;
+  font-size: 15px;
+  line-height: 30px;
+  word-wrap: break-word;
+  font-weight: 400;
+  overflow-x: hidden;
+}
+
+.element {
+  animation: customOne .8s ease-in-out 0s 1 normal none running;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+  clear: both;
+  justify-content: center;
+  position: relative;
+}
+
+h3{
+  font-size: 23px;
+}
+
+@media screen and (max-width: 900px) {
+
+  .element {
+    flex-direction: column;
+  }
+}
+
+@keyframes customOne {
+  0% {
+    opacity: 0;
+    transform: translateX(50px)
+  }
+
+  to {
+    opacity: 1;
+    transform: none
+  }
+}

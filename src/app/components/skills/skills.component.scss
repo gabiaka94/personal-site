@@ -1,0 +1,36 @@
+img{
+  width: 100px;
+  height: 100px;
+}
+
+.element{
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  //padding: 100px;
+}
+
+.container > div {
+  flex: 15%;
+  /*demo*/
+}
+
+.item {
+  width: 100%
+}
+
+
+
+@media screen and (max-width: 900px) {
+  .element {
+    margin-top: 75px;
+  }
+  .container > div {
+    flex: 30%;
+    margin-bottom: 10px;
+  }
+}

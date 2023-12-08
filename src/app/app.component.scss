@@ -1,0 +1,37 @@
+.main {
+  width: 100%;
+  height: auto;
+  clear: both;
+  float: left;
+  position: relative;
+}
+
+.main, .main * {
+  box-sizing: border-box;
+}
+
+
+.content {
+  background-color: #1a1a1a;
+  width: 100%;
+  height: auto;
+  float: left;
+  position: relative;
+  padding-left: 450px;
+  border-left: 1px solid #ebebeb;
+  border-left-color: #202020;
+
+  .content-in {
+    position: relative;
+    width: 100%;
+    float: left;
+    clear: both;
+    min-height: 100vh;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .content {
+    padding-left: 0px;
+  }
+}

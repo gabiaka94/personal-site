@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="hamburger" (click)="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+  <div class="logo">
+      <img [routerLink]="['/']" [routerLinkActive]="['active']" data-v-0cbe9a2a="" src="assets/logo.png"  class="svg">
+  </div>
+
+  <div class="menu-container" [@slideInOut]="menuState" >
+    <div class="close-icon" (click)="toggleMenu()">
+      X
+    </div>
+      <div class="menu-items">
+        <div  [routerLink]="['/']" [routerLinkActive]="['active']"
+              [routerLinkActiveOptions]="{ exact: true }" (click)="toggleMenu()">Home
+        </div>
+        <div [routerLink]="['/about']" [routerLinkActive]="['active']" (click)="toggleMenu()">Chi sono</div>
+        <div [routerLink]="['/skills']" [routerLinkActive]="['active']" (click)="toggleMenu()">Skills</div>
+        <div [routerLink]="['/resumee']" [routerLinkActive]="['active']" (click)="toggleMenu()">Curriculum</div>
+        <div [routerLink]="['/contact']" [routerLinkActive]="['active']" (click)="toggleMenu()">Contatti</div>
+      </div>
+  </div>
+</div>
+

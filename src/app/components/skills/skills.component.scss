@@ -5,6 +5,7 @@ img{
 
 .element{
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .container {
@@ -19,6 +20,9 @@ img{
 
 .item {
   width: 100%
+}
+h3 {
+  text-align: left;
 }
 
 

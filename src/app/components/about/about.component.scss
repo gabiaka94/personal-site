@@ -1,4 +1,6 @@
-
+.element {
+  text-wrap: balance;
+}
 @media screen and (max-width: 900px) {
   .element {
     margin-top: 75px;

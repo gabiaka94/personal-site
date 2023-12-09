@@ -1,0 +1,16 @@
+<div class="menu">
+  <div class="logo">
+    <img [routerLink]="['/']" data-v-0cbe9a2a="" src="../../../../assets/logo.svg" class="svg">
+  </div>
+
+  <div class="items">
+    <div [routerLink]="['/']" [routerLinkActive]="['active']"
+         [routerLinkActiveOptions]="{ exact: true }">
+      {{dictionary.home}}
+    </div>
+    <div [routerLink]="['/about']" [routerLinkActive]="['active']">{{dictionary.about}}</div>
+    <div [routerLink]="['/skills']" [routerLinkActive]="['active']">{{dictionary.skills}}</div>
+    <div [routerLink]="['/resumee']" [routerLinkActive]="['active']">{{dictionary.resumee}}</div>
+    <div [routerLink]="['/contact']" [routerLinkActive]="['active']">{{dictionary.contacts}}</div>
+  </div>
+</div>

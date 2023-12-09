@@ -1,8 +1,9 @@
-// hamburger-menu.component.ts
+// hamburger-full-full-menu.component.ts
 
-import {Component} from '@angular/core';
+import {Component, inject} from '@angular/core';
 import {trigger, state, style, animate, transition} from '@angular/animations';
 import { RouterLink, RouterLinkActive} from '@angular/router';
+import {MenuDictionary} from '../menu.dictionary';
 
 @Component({
   selector: 'hamburger-menu-component',
@@ -11,7 +12,7 @@ import { RouterLink, RouterLinkActive} from '@angular/router';
   standalone: true,
   imports: [
     RouterLink,
-    RouterLinkActive
+    RouterLinkActive,
   ],
   animations: [
     trigger('slideInOut', [
@@ -28,7 +29,7 @@ import { RouterLink, RouterLinkActive} from '@angular/router';
 })
 export class HamburgerMenuComponent  {
   menuState: string = 'out';
-
+  dictionary = inject(MenuDictionary);
 
   toggleMenu() {
     this.menuState = this.menuState === 'out' ? 'in' : 'out';

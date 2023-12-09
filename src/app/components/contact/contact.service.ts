@@ -13,19 +13,15 @@ export interface EmailFormData {
 }
 
 export interface ApiResponse {
-  // Define the structure of your API response
-  // You might need to adjust this based on your API's actual response
-  // For simplicity, assuming the API returns an object with a 'success' property
-  success: boolean;
-  message: string;
-  // Add other properties if needed
+  ok: true;
+  next: string;
 }
 
 @Injectable({
   providedIn: 'root'
 })
 export class ContactService {
-  private apiUrl = 'https://jsonplaceholder.typicode.com/posts'; // Replace this with your actual API endpoint
+  private apiUrl = 'https://formspree.io/f/mvojeqdv';
 
   constructor(private http: HttpClient) {}
 

@@ -2,11 +2,12 @@ import {Component, inject, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {ContactService} from './contact.service';
+import {IconsContactComponent} from '../icons-contact/icons-contact.component';
 
 @Component({
   selector: 'app-contact',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule],
+  imports: [CommonModule, ReactiveFormsModule, IconsContactComponent],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.scss',
 })

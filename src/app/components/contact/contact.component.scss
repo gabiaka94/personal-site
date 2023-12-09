@@ -1,3 +1,9 @@
+.element{
+  padding-top: 30px;
+  flex-direction: column;
+  justify-content: left;
+}
+
 .flex-container {
   display: flex;
   flex-wrap: wrap;
@@ -5,13 +11,10 @@
 }
 
 .flex-item {
-  flex: 0 0 48%;
+  flex: 0 0 100%;
   margin-bottom: 1rem;
 }
 
-.full-width {
-  flex: 0 0 100%;
-}
 label {
   display: block;
   margin-bottom: 0.5rem;
@@ -28,6 +31,21 @@ textarea {
   box-sizing: border-box;
 }
 
+textarea {
+  height: 400px;
+  resize: unset;
+}
+
+.error {
+  color: #ff0000;
+}
+
+.description {
+  text-wrap: balance;
+  text-align: center;
+  font-size: 18px;
+}
+
 button {
   padding: 0.75rem;
   background-color: #4caf50;
@@ -40,4 +58,13 @@ button {
 button:disabled {
   background-color: #ccc;
   cursor: not-allowed;
+}
+
+@media screen and (max-width: 900px) {
+  textarea {
+    height: 200px;
+  }
+  .element {
+    padding-top: 130px;
+  }
 }

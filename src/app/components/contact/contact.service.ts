@@ -1,7 +1,8 @@
 // email.service.ts
-import { Injectable } from '@angular/core';
+import {inject, Injectable} from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import {GoogleAnalyticsService} from 'ngx-google-analytics';
 
 
 
@@ -23,7 +24,9 @@ export interface ApiResponse {
 export class ContactService {
   private apiUrl = 'https://formspree.io/f/mvojeqdv';
 
-  constructor(private http: HttpClient) {}
+
+  private readonly http = inject(HttpClient);
+  private readonly gaService = inject(GoogleAnalyticsService)
 
   sendEmail(formData: EmailFormData): Observable<ApiResponse> {
     // Assume your API expects a POST request with the email data

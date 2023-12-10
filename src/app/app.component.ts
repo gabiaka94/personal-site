@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
   }
 
   checkWindowSize() {
-    this.showHamburgerMenu = window.innerWidth <= 900;
+    this.showHamburgerMenu = window.innerWidth <= 1030;
   }
 
   ngOnInit(): void {

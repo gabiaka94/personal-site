@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 body {
-  color: #fff;
+  color: #cbb196;
   background-color: #1a1a1a;
   margin: 0;
   font-size: 15px;
@@ -8,6 +8,7 @@ body {
   word-wrap: break-word;
   font-weight: 400;
   overflow-x: hidden;
+  font-family: font-principal;
 }
 
 .element {
@@ -26,7 +27,7 @@ h3{
   font-size: 23px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1030px) {
 
   .element {
     flex-direction: column;
@@ -43,4 +44,9 @@ h3{
     opacity: 1;
     transform: none
   }
+}
+
+@font-face {
+  font-family: 'font-principal';
+  src: url('Maharlika-Regular.ttf');
 }

@@ -26,7 +26,6 @@ export class ContactService {
 
 
   private readonly http = inject(HttpClient);
-  private readonly gaService = inject(GoogleAnalyticsService)
 
   sendEmail(formData: EmailFormData): Observable<ApiResponse> {
     // Assume your API expects a POST request with the email data

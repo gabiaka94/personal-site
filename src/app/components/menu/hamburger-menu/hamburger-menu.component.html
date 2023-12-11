@@ -17,10 +17,10 @@
               [routerLinkActiveOptions]="{ exact: true }" (click)="toggleMenu()">
           {{dictionary.home}}
         </div>
-        <div [routerLink]="['/about']" [routerLinkActive]="['active']" (click)="toggleMenu()">{{dictionary.about}}</div>
-        <div [routerLink]="['/skills']" [routerLinkActive]="['active']" (click)="toggleMenu()">{{dictionary.skills}}</div>
-        <div [routerLink]="['/resumee']" [routerLinkActive]="['active']" (click)="toggleMenu()">{{dictionary.resumee}}</div>
-        <div [routerLink]="['/contact']" [routerLinkActive]="['active']" (click)="toggleMenu()">{{dictionary.contacts}}</div>
+        <div [routerLink]="['/about']" [routerLinkActive]="['active']" (click)="toggleMenu()" gaEvent="click_about" gaCategory="click_hambuger_menu">{{dictionary.about}}</div>
+        <div [routerLink]="['/skills']" [routerLinkActive]="['active']" (click)="toggleMenu()" gaEvent="click_skills" gaCategory="click_hambuger_menu">{{dictionary.skills}}</div>
+        <div [routerLink]="['/resumee']" [routerLinkActive]="['active']" (click)="toggleMenu()" gaEvent="click_resumee" gaCategory="click_hambuger_menu">{{dictionary.resumee}}</div>
+        <div [routerLink]="['/contact']" [routerLinkActive]="['active']" (click)="toggleMenu()" gaEvent="click_contact" gaCategory="click_hambuger_menu">{{dictionary.contacts}}</div>
       </div>
   </div>
 </div>

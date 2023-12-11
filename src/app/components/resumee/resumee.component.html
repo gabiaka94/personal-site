@@ -1,5 +1,5 @@
 <div class="element">
-  <button (click)="printCv()" type="button">Download</button>
+  <button (click)="printCv()" type="button" gaEvent="download_cv" gaCategory="ga_directive_test">Download</button>
   <pdf-viewer
     class="pdf-viewer"
     [src]="pathCvToPreview"

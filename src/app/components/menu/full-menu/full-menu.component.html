@@ -8,9 +8,9 @@
          [routerLinkActiveOptions]="{ exact: true }">
       {{dictionary.home}}
     </div>
-    <div [routerLink]="['/about']" [routerLinkActive]="['active']">{{dictionary.about}}</div>
-    <div [routerLink]="['/skills']" [routerLinkActive]="['active']">{{dictionary.skills}}</div>
-    <div [routerLink]="['/resumee']" [routerLinkActive]="['active']">{{dictionary.resumee}}</div>
-    <div [routerLink]="['/contact']" [routerLinkActive]="['active']">{{dictionary.contacts}}</div>
+    <div [routerLink]="['/about']" [routerLinkActive]="['active']" gaEvent="click_about" gaCategory="click_full_menu">{{dictionary.about}}</div>
+    <div [routerLink]="['/skills']" [routerLinkActive]="['active']" gaEvent="click_skills" gaCategory="click_full_menu">{{dictionary.skills}}</div>
+    <div [routerLink]="['/resumee']" [routerLinkActive]="['active']" gaEvent="click_resumee" gaCategory="click_full_menu">{{dictionary.resumee}}</div>
+    <div [routerLink]="['/contact']" [routerLinkActive]="['active']" gaEvent="click_contact" gaCategory="click_full_menu">{{dictionary.contacts}}</div>
   </div>
 </div>

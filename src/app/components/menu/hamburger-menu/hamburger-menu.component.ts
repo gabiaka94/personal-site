@@ -1,8 +1,8 @@
 // hamburger-full-full-menu.component.ts
 
-import {Component, inject} from '@angular/core';
+import {Component, ElementRef, HostListener, inject} from '@angular/core';
 import {trigger, state, style, animate, transition} from '@angular/animations';
-import { RouterLink, RouterLinkActive} from '@angular/router';
+import {RouterLink, RouterLinkActive} from '@angular/router';
 import {MenuDictionary} from '../menu.dictionary';
 
 @Component({
@@ -27,12 +27,25 @@ import {MenuDictionary} from '../menu.dictionary';
     ]),
   ]
 })
-export class HamburgerMenuComponent  {
-  menuState: string = 'out';
+export class HamburgerMenuComponent {
+  menuState: 'out' | 'in' = 'out';
   dictionary = inject(MenuDictionary);
+  private readonly _elementRef = inject(ElementRef);
+
+  @HostListener('document:click', ['$event', '$event.target'])
+  onDocumentClicked(event: MouseEvent, targetElement: HTMLElement) {
+    if (targetElement && document.body.contains(targetElement) && !this._elementRef.nativeElement.contains(targetElement)) {
+      this.closeMenu();
+    }
+  }
+
 
   toggleMenu() {
     this.menuState = this.menuState === 'out' ? 'in' : 'out';
+  }
+
+  closeMenu() {
+    this.menuState = 'out'
   }
 
 }

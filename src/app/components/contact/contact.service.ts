@@ -24,7 +24,6 @@ export interface ApiResponse {
 export class ContactService {
   private apiUrl = 'https://formspree.io/f/mvojeqdv';
 
-
   private readonly http = inject(HttpClient);
 
   sendEmail(formData: EmailFormData): Observable<ApiResponse> {

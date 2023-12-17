@@ -6,20 +6,20 @@ import {ContactComponent} from './components/contact/contact.component';
 import {ResumeeComponent} from './components/resumee/resumee.component';
 
 export const routes: Routes = [
+  { path: '', component: HomeComponent, data: { title: 'Gabriele Miano | Homepage' }
+  },
+
   {
-    path: '', component: HomeComponent,
+    path: 'about', component: AboutComponent,  data: { title: 'Gabriele Miano | About' }
   },
   {
-    path: 'about', component: AboutComponent
+    path: 'skills', component: SkillsComponent,  data: { title: 'Gabriele Miano | Skills' }
   },
   {
-    path: 'skills', component: SkillsComponent
+    path: 'contacts', component: ContactComponent,  data: { title: 'Gabriele Miano | Contacts' }
   },
   {
-    path: 'contact', component: ContactComponent
-  },
-  {
-    path: 'resumee', component: ResumeeComponent
+    path: 'resumee', component: ResumeeComponent,  data: { title: 'Gabriele Miano | Resumee' }
   },
 
   { path: '**', redirectTo: '', pathMatch: 'full'}

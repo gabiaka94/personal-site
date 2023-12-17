@@ -1,8 +1,9 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {Component, HostListener, inject, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
-import {RouterOutlet} from '@angular/router';
+import {Router, RouterOutlet, RoutesRecognized} from '@angular/router';
 import {FullMenuComponent} from './components/menu/full-menu/full-menu.component';
 import {HamburgerMenuComponent} from './components/menu/hamburger-menu/hamburger-menu.component';
+import {Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +13,8 @@ import {HamburgerMenuComponent} from './components/menu/hamburger-menu/hamburger
   styleUrl: './app.component.scss'
 })
 export class AppComponent implements OnInit {
-  title = 'personal-site';
-
+  title = inject(Title);
+  private router = inject(Router);
   showHamburgerMenu = true;
 
   @HostListener('window:resize', ['$event'])
@@ -27,5 +28,10 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     this.checkWindowSize();
+    this.router.events.subscribe((data) => {
+      if (data instanceof RoutesRecognized && data.state.root.firstChild) {
+        this.title.setTitle(data.state.root.firstChild.data['title']);
+      }
+    });
   }
 }
